@@ -2,9 +2,9 @@
 
 HA_PROXY_DIR=/usr/local/etc/haproxy
 LE_DIR=/etc/letsencrypt/live
-DOMAINS=$(ls ${LE_DIR})
-
 rm -f ${LE_DIR}/README
+
+DOMAINS=$(ls ${LE_DIR})
 
 # update certs for HAProxy
 for DOMAIN in ${DOMAINS}; do
